@@ -37,3 +37,4 @@ run-formats: formats
 
 clean:
 	rm -rf $(BUILD_DIR)/*.o $(PROGRAMS)
+

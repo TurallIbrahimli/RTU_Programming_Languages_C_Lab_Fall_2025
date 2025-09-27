@@ -9,7 +9,7 @@ int sum_to_n(int n) {
 }
 int main(void) {
     int n;
-    printf('pos integr');
+    printf("positive integer:");
     scanf("%d", &n);
     if (n<1) {
         printf("Error: n must be >= 1\n");
