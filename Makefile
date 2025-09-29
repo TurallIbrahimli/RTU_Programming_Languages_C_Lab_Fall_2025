@@ -6,11 +6,11 @@ LDFLAGS =
 BUILD_DIR = bin
 SRC_DIR = src
 
-PROGRAMS = $(BUILD_DIR)/hello $(BUILD_DIR)/calculator $(BUILD_DIR)/formats
+PROGRAMS = $(BUILD_DIR)/lab2_2 $(BUILD_DIR)/calculator $(BUILD_DIR)/formats
 
 all: $(PROGRAMS)
 
-$(BUILD_DIR)/hello: $(SRC_DIR)/hello.c
+$(BUILD_DIR)/lab2_2: $(SRC_DIR)/lab2_2.c
 	@mkdir -p $(BUILD_DIR)
 	$(CC) $(CFLAGS) $< -o $@ $(LDFLAGS)
 
@@ -22,12 +22,12 @@ $(BUILD_DIR)/formats: $(SRC_DIR)/format_specifiers.c
 	@mkdir -p $(BUILD_DIR)
 	$(CC) $(CFLAGS) $< -o $@ $(LDFLAGS)
 
-hello: $(BUILD_DIR)/hello
+lab2_2: $(BUILD_DIR)/lab2_2
 calculator: $(BUILD_DIR)/calculator
 formats: $(BUILD_DIR)/formats
 
-run-hello: hello
-	./$(BUILD_DIR)/hello
+run-lab2_2: lab2_2
+	./$(BUILD_DIR)/lab2_2
 
 run-calculator: calculator
 	./$(BUILD_DIR)/calculator
